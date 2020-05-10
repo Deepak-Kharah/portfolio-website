@@ -59,7 +59,7 @@ export default function Navbar() {
 				<div className="hamburger-menu">
 					<i className="fas fa-bars" />
 				</div>
-				<nav>
+				<nav className="nav-hidden">
 					<a href="#overview">Overview</a>
 					<a href="#projects">Projects</a>
 					<a href="#mentions">Mentions</a>
