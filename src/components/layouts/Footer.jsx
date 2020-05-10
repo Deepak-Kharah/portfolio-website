@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../static/logo.svg';
+import logo from '../../static/logo.webp';
 
 export default function Footer() {
 	return (
@@ -18,7 +18,7 @@ export default function Footer() {
 					</div>
 					<div className="quick-links">
 						<h2>Quick links</h2>
-						<nav>
+						<nav aria-label="Main">
 							<a href="#overview">Overview</a>
 							<a href="#projects">Projects</a>
 							<a href="#mentions">Mentions</a>

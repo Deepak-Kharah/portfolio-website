@@ -15,6 +15,9 @@ $archivo: 'Archivo', sans-serif;
 $heading: 'Roboto', sans-serif;
 $handwriting: 'Gloria Hallelujah', cursive;
 
+$shadow: 0 1px 2px rgba(103, 255, 219, 0.07), 0 2px 4px rgba(97, 242, 121, 0.07), 0 4px 8px rgba(67, 230, 67, 0.07);
+$dark-shadow: 0 2rem 50px rgba(0, 0, 0, 0.2);
+
 // Global styles
 
 body {
@@ -85,9 +88,7 @@ body {
 	&:hover {
 		background-color: darken($txt-primary, 25%);
 		color: white;
-		box-shadow: 0 1px 2px rgba(103, 255, 219, 0.07), 0 2px 4px rgba(97, 242, 121, 0.07),
-			0 4px 8px rgba(67, 230, 67, 0.07), 0 8px 16px rgba(88, 255, 116, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
-			0 32px 64px rgba(0, 0, 0, 0.07);
+		box-shadow: $shadow;
 	}
 }
 
@@ -106,9 +107,7 @@ body {
 		background-color: darken($txt-primary, 25%);
 
 		color: $txt-white;
-		box-shadow: 0 1px 2px rgba(103, 255, 219, 0.07), 0 2px 4px rgba(97, 242, 121, 0.07),
-			0 4px 8px rgba(67, 230, 67, 0.07), 0 8px 16px rgba(88, 255, 116, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
-			0 32px 64px rgba(0, 0, 0, 0.07);
+		box-shadow: $shadow;
 	}
 }
 
@@ -147,9 +146,7 @@ a {
 	&:hover {
 		color: lighten($txt-primary, 15%);
 		text-decoration: none;
-		text-shadow: 0 1px 2px rgba(103, 255, 219, 0.07), 0 2px 4px rgba(97, 242, 121, 0.07),
-			0 4px 8px rgba(67, 230, 67, 0.07), 0 8px 16px rgba(88, 255, 116, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
-			0 32px 64px rgba(0, 0, 0, 0.07);
+		text-shadow: $shadow;
 	}
 }
 
@@ -270,7 +267,7 @@ q {
 
 #hero {
 	height: 92vh;
-	background: url('./static/bg_logo.svg');
+	background: url('./static/bg_logo.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
@@ -362,7 +359,7 @@ q {
 			.logo {
 				display: initial;
 				width: 50%;
-				background: url('./static/slant_logo.svg');
+				background: url('./static/slant_logo.webp');
 				background-position: left;
 				background-size: contain;
 				background-repeat: no-repeat;
@@ -398,7 +395,7 @@ q {
 			margin-top: 1rem;
 			border-radius: 10px;
 			padding: 1rem 3rem;
-			box-shadow: 0 2rem 50px rgba(0, 0, 0, 0.2);
+			box-shadow: $dark-shadow;
 			margin-inline-start: 0.5rem;
 			margin-inline-end: 0.5rem;
 
@@ -433,6 +430,10 @@ q {
 				flex: 1;
 				display: inline-block;
 				max-width: 20rem;
+
+				img {
+					max-width: 100%;
+				}
 			}
 		}
 	}
@@ -451,7 +452,7 @@ q {
 
 			img {
 				max-width: 20rem;
-				box-shadow: 0 2rem 50px rgba(0, 0, 0, 0.2);
+				box-shadow: $dark-shadow;
 			}
 		}
 

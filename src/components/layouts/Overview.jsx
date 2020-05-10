@@ -1,6 +1,6 @@
 import React from 'react';
 
-import desk from '../../static/desk_ill.svg';
+import desk from '../../static/desk_ill.webp';
 
 export default function Overview() {
 	return (

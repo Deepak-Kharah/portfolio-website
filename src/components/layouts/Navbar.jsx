@@ -4,7 +4,7 @@ export default function Navbar() {
 	return (
 		<header id="navbar">
 			<div className="container">
-				<a href="/" className="logo">
+				<a href="/" className="logo" aria-label="Deepak Kharah's logo">
 					<svg viewBox="0 0 126 140" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="m23.57 5.0737c0-1.3446 0.5342-2.6342 1.485-3.585 0.9508-0.95081 2.2404-1.485 3.585-1.485h49.48c6.543-0.072047 13.055 0.90363 19.29 2.89l-8.69 8.82c-2.8644-0.5443-5.7744-0.8122-8.69-0.8h-50.62c-0.7673 0.0013-1.5273-0.1488-2.2364-0.4418-0.7092-0.2931-1.3535-0.72318-1.896-1.2657-0.5426-0.54256-0.9727-1.1869-1.2657-1.896-0.2931-0.70914-0.4432-1.4691-0.4419-2.2364z"
@@ -59,7 +59,7 @@ export default function Navbar() {
 				<div className="hamburger-menu">
 					<i className="fas fa-bars" />
 				</div>
-				<nav className="nav-hidden">
+				<nav className="nav-hidden" aria-label="Main">
 					<a href="#overview">Overview</a>
 					<a href="#projects">Projects</a>
 					<a href="#mentions">Mentions</a>

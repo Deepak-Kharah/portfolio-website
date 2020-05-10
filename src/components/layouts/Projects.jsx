@@ -1,7 +1,7 @@
 import React from 'react';
 
-import kheti_tile from '../../static/kheti_ui_sketch.svg';
-import pastelibrary_tile from '../../static/paste_library_ui_sketch.svg';
+import kheti_tile from '../../static/kheti_ui_sketch.webp';
+import pastelibrary_tile from '../../static/paste_library_ui_sketch.webp';
 
 import ProjectTile from '../lists/ProjectTile';
 
