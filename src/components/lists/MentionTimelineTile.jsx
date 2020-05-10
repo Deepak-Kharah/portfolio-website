@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function MentionTimelineTile({ date, title, desc }) {
 	return (
-		<div>
+		<div className="mention-timeline-element">
 			<h2>
-				{date} • {title}
+				{date} <span className="txt-primary">•</span> {title}
 			</h2>
 
 			<p>{desc}</p>

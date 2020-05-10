@@ -12,13 +12,26 @@ export default function Contact() {
 				<p>
 					<cite>-Anne Morrow Lindbergh </cite>
 				</p>
+				<div className="social-links">
+					<a
+						title="LinkedIn"
+						href="https://linkedin.com/in/deepakkharah"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<i className="fab fa-linkedin" />
+					</a>
+					<a
+						title="GitHub"
+						href="https://github.com/Deepak-Kharah/"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<i className="fab fa-github" />
+					</a>
+				</div>
 
-				<a href="https://linkedin.com/in/deepakkharah" rel="noopener noreferrer" target="_blank">
-					LinkedIn
-				</a>
-				<a href="https://github.com/Deepak-Kharah/" rel="noopener noreferrer" target="_blank">
-					Github
-				</a>
+				<a href="mailto:me@deepakkharah.com">me@deepakkharah.com</a>
 			</div>
 		</section>
 	);

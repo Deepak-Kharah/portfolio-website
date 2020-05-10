@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Exo:ital,wght@0,400;1,600&family=Gloria+Hallelujah&family=Roboto:wght@300;400;500&family=Ubuntu+Mono:wght@400;700&display=swap');
 
-// background
+// Variables
+
+// colors
 $txt-white: #fff;
 $txt-primary: #64f4ac;
 $light-text: #adadad;
 $light-bg: #2d2e32;
 $dark-bg: #25262a;
+
 // Fonts
 $mono: 'Ubuntu Mono', monospace;
 $archivo: 'Archivo', sans-serif;
@@ -13,15 +16,16 @@ $heading: 'Roboto', sans-serif;
 $handwriting: 'Gloria Hallelujah', cursive;
 
 // Global styles
+
 body {
 	color: $light-text;
 	font-family: $mono;
 	line-height: 2rem;
-	font-weight: 400;
+	background-color: $light-bg;
 
 	section {
-		padding-top: 3rem;
-		padding-bottom: 3rem;
+		overflow: auto;
+		border: none;
 
 		&:nth-child(even) {
 			background-color: $light-bg;
@@ -37,7 +41,7 @@ body {
 			& > header h1 {
 				font-family: $heading;
 				text-transform: uppercase;
-				margin: 2rem auto;
+				margin: 3rem auto;
 
 				&:after {
 					content: '.';
@@ -75,6 +79,16 @@ body {
 	font-weight: bold;
 	padding: 1rem;
 	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.1s;
+
+	&:hover {
+		background-color: darken($txt-primary, 25%);
+		color: white;
+		box-shadow: 0 1px 2px rgba(103, 255, 219, 0.07), 0 2px 4px rgba(97, 242, 121, 0.07),
+			0 4px 8px rgba(67, 230, 67, 0.07), 0 8px 16px rgba(88, 255, 116, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
+			0 32px 64px rgba(0, 0, 0, 0.07);
+	}
 }
 
 .btn-secondary {
@@ -83,8 +97,19 @@ body {
 	border-radius: 6px;
 	color: $txt-primary;
 	font-weight: bold;
+	text-decoration: none;
 	padding: 1rem;
 	text-transform: uppercase;
+	transition: all 0.1s;
+
+	&:hover {
+		background-color: darken($txt-primary, 25%);
+
+		color: $txt-white;
+		box-shadow: 0 1px 2px rgba(103, 255, 219, 0.07), 0 2px 4px rgba(97, 242, 121, 0.07),
+			0 4px 8px rgba(67, 230, 67, 0.07), 0 8px 16px rgba(88, 255, 116, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
+			0 32px 64px rgba(0, 0, 0, 0.07);
+	}
 }
 
 // text
@@ -110,6 +135,24 @@ h2 {
 	}
 }
 
+p {
+	max-width: 30rem;
+	margin: auto;
+}
+
+a {
+	color: $txt-primary;
+	transition: all 0.1s;
+
+	&:hover {
+		color: lighten($txt-primary, 15%);
+		text-decoration: none;
+		text-shadow: 0 1px 2px rgba(103, 255, 219, 0.07), 0 2px 4px rgba(97, 242, 121, 0.07),
+			0 4px 8px rgba(67, 230, 67, 0.07), 0 8px 16px rgba(88, 255, 116, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
+			0 32px 64px rgba(0, 0, 0, 0.07);
+	}
+}
+
 q {
 	font-family: $handwriting;
 	text-align: center;
@@ -120,10 +163,15 @@ q {
 	}
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~// Navbar
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Navbar
+
 #navbar {
 	height: 8vh;
-	background: $light-bg;
+	// position: fixed;
+	width: 100%;
+	background-color: $light-bg;
 
 	.container {
 		display: flex;
@@ -133,32 +181,65 @@ q {
 		max-width: 90%;
 		margin: 0 auto;
 
-		.logo:hover {
-			cursor: pointer;
+		.logo {
+			display: flex;
+			height: 100%;
+			align-content: center;
+
+			svg {
+				margin: auto;
+				height: 75%;
+			}
+
+			&:hover {
+				cursor: pointer;
+
+				path {
+					fill: $txt-white;
+				}
+			}
+		}
+
+		.hamburger-menu {
+			font-size: 2rem;
+
+			&:hover {
+				color: $txt-white;
+				cursor: pointer;
+			}
 		}
 	}
 
 	nav {
-		display: none;
+		display: none !important;
+		position: fixed;
+		justify-content: space-between;
+		background: $light-bg;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 8vh;
+		width: 100%;
+		height: 100%;
+
+		a {
+			font-family: $mono;
+			color: $light-text;
+			padding: 0.5rem;
+		}
 	}
 }
-
-// nav {
-//     display: flex;
-//     width: 50%;
-//     justify-content: space-between;
-
-//     a {
-//     font-family: $mono;
-//     color: $light-text;
-//     padding: 0.5rem;
-// }
-// }
 
 // Hero
 
 #hero {
 	height: 92vh;
+	background: url('./static/bg_logo.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
 
 	.container {
 		height: 90%;
@@ -186,36 +267,55 @@ q {
 
 		div {
 			display: flex;
-			height: 5rem;
 			justify-content: center;
-			align-items: flex-end;
+
+			a {
+				margin-top: 2rem;
+				padding-right: 2rem;
+				padding-left: 2rem;
+			}
 		}
+	}
+
+	@media screen and (min: 590px) {
+		background-color: red;
 	}
 }
 
 // Overview
 
-.skill-card {
-	background-color: $light-bg;
-	width: 300px;
-	border-radius: 10px;
-	margin: 2rem auto;
-	padding: 1rem 3rem;
-	box-shadow: 0 2rem 50px rgba(0, 0, 0, 0.2);
+#skills {
+	margin-bottom: 5rem;
+}
+.skill-cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 
-	h3 {
-		color: white;
-		font-size: 1rem;
-		margin-bottom: 1rem;
-		font-weight: 400;
-	}
+	.skill-card {
+		background-color: $light-bg;
+		width: 300px;
+		margin-top: 1rem;
+		border-radius: 10px;
+		padding: 1rem 3rem;
+		box-shadow: 0 2rem 50px rgba(0, 0, 0, 0.2);
+		margin-inline-start: 0.5rem;
+		margin-inline-end: 0.5rem;
 
-	li {
-		list-style: none;
-		font-family: $mono;
-		font-weight: bold;
-		font-size: 1.5rem;
-		margin: 0.5rem auto;
+		h3 {
+			color: white;
+			font-size: 1rem;
+			margin-bottom: 1rem;
+			font-weight: 400;
+		}
+
+		li {
+			list-style: none;
+			font-family: $mono;
+			font-weight: bold;
+			font-size: 1.5rem;
+			margin: 0.5rem auto;
+		}
 	}
 }
 
@@ -227,8 +327,13 @@ q {
 		margin: 2rem auto;
 	}
 
-	img {
+	.tile-img {
 		text-align: center;
+
+		img {
+			max-width: 20rem;
+			box-shadow: 0 2rem 50px rgba(0, 0, 0, 0.2);
+		}
 	}
 
 	h1 {
@@ -241,12 +346,10 @@ q {
 // convinced
 
 #convinced {
+	padding: 2rem;
+
 	h2:after {
 		content: '?';
-	}
-
-	a {
-		color: $txt-primary;
 	}
 
 	p {
@@ -255,24 +358,37 @@ q {
 	}
 }
 
+// Contact
+
 #contact .container {
 	text-align: center;
+	padding-bottom: 3rem;
 
 	p {
 		text-align: center;
 		font-size: small;
 		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 
-	a {
-		color: $txt-white;
+	.social-links {
+		padding: 2rem;
+		a {
+			color: $light-text;
+			font-size: 2rem;
+			margin: 2rem;
+
+			&:hover i {
+				color: $txt-white;
+			}
+		}
 	}
 }
 
+// Footer
+
 footer {
 	background: $light-bg;
-	// padding-top: 1rem;
-
 	text-align: center;
 
 	.container {
@@ -280,12 +396,15 @@ footer {
 		margin: auto;
 	}
 
-	.logo {
+	img {
+		text-align: center;
 		padding-top: 2rem;
+		max-width: 3rem;
 	}
 
 	h1 {
 		font-family: $heading;
+		margin-bottom: 2rem;
 		color: $light-text;
 		font-weight: 500;
 
@@ -299,22 +418,26 @@ footer {
 
 	nav {
 		display: flex;
-		min-width: 50%;
-
+		justify-content: center;
 		flex-wrap: wrap;
-		padding: 2rem;
+		align-items: center;
+		margin: 1rem auto;
+
 		a {
-			padding: 1rem;
-			flex: 0 50%;
+			margin: 0.5rem 1rem;
 			color: $light-text;
-			font-size: 1rem;
 		}
 	}
 
 	.other-info {
 		background: $dark-bg;
 		font-weight: 300;
+		font-size: 0.75rem;
 		font-family: $heading;
 		padding: 0.5rem;
+
+		p {
+			line-height: 1.25rem;
+		}
 	}
 }
