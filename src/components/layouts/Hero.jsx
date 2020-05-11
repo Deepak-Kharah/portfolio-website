@@ -18,7 +18,7 @@ export default function Hero() {
 						</a>
 					</div>
 				</div>
-				<div className="logo">{/* <img src={slant_logo} alt="" /> */}</div>
+				<div className="logo" />
 			</div>
 		</section>
 	);

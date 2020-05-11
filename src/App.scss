@@ -28,7 +28,6 @@ body {
 
 	section {
 		overflow: auto;
-		border: none;
 
 		&:nth-child(even) {
 			background-color: $light-bg;
@@ -39,8 +38,6 @@ body {
 		}
 
 		.container {
-			width: 80%;
-
 			& > header h1 {
 				font-family: $heading;
 				text-transform: uppercase;
@@ -61,18 +58,12 @@ body {
 	}
 }
 
-.txt-white {
-	color: $txt-white;
-}
-
-.txt-primary {
-	color: $txt-primary;
-}
-
 .container {
-	max-width: 90%;
+	max-width: 80%;
 	margin: 0 auto;
 }
+
+// buttons
 
 .btn-primary {
 	background: $txt-primary;
@@ -160,13 +151,20 @@ q {
 	}
 }
 
+.txt-white {
+	color: $txt-white;
+}
+
+.txt-primary {
+	color: $txt-primary;
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Navbar
 
 #navbar {
 	height: 8vh;
-	// position: fixed;
 	width: 100%;
 	background-color: $light-bg;
 
@@ -175,7 +173,6 @@ q {
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
-		max-width: 90%;
 		margin: 0 auto;
 
 		.logo {
@@ -221,19 +218,23 @@ q {
 		height: 100%;
 
 		a {
-			font-family: $mono;
 			color: $light-text;
 			padding: 0.5rem;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $txt-white;
+				text-decoration: underline wavy;
+			}
 		}
 	}
 
 	.nav-hidden {
 		display: none;
 	}
-}
 
-@media screen and (min-width: 1080px) {
-	#navbar {
+	@media screen and (min-width: 1080px) {
 		.container {
 			.hamburger-menu {
 				display: none;
@@ -242,19 +243,9 @@ q {
 
 		nav {
 			position: relative;
-			background: initial;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
 			margin-top: initial;
 			width: initial;
 			height: initial;
-
-			a {
-				font-family: $mono;
-				color: $light-text;
-				padding: 0.5rem;
-			}
 		}
 
 		.nav-hidden {
@@ -299,12 +290,12 @@ q {
 
 			div {
 				display: flex;
-				justify-content: center;
+				justify-content: flex-start;
 
 				a {
-					margin-top: 2rem;
-					padding-right: 2rem;
-					padding-left: 2rem;
+					margin-top: 1rem;
+					margin-left: 0;
+					padding: 0.75rem 2rem;
 				}
 			}
 		}
@@ -322,38 +313,6 @@ q {
 			align-items: center;
 			.content {
 				width: 50%;
-				height: 90%;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				h1 {
-					font-family: $archivo;
-					font-size: 2.5rem;
-					line-height: 3rem;
-					text-align: left;
-				}
-
-				h3 {
-					font-family: $heading;
-					font-weight: 300;
-
-					span {
-						color: white;
-						font-weight: 500;
-						font-style: italic;
-					}
-				}
-
-				div {
-					display: flex;
-					justify-content: center;
-
-					a {
-						margin-top: 2rem;
-						padding-right: 2rem;
-						padding-left: 2rem;
-					}
-				}
 			}
 
 			.logo {
