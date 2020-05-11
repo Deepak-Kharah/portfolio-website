@@ -144,6 +144,7 @@ a {
 q {
 	font-family: $handwriting;
 	text-align: center;
+	font-size: 1rem;
 
 	&:before,
 	&:after {
@@ -457,8 +458,8 @@ q {
 	}
 
 	p {
+		font-family: $handwriting;
 		text-align: center;
-		font-size: small;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
@@ -548,6 +549,12 @@ footer {
 		.quick-links h2 {
 			display: block;
 		}
+
+		.name-logo p {
+			font-family: $heading;
+			font-weight: 300;
+		}
+
 		h1 {
 			margin-bottom: auto;
 		}
