@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Exo:ital,wght@0,400;1,600&family=Gloria+Hallelujah&family=Roboto:wght@300;400;500&family=Ubuntu+Mono:wght@400;700&display=swap');
+// https://fonts.google.com/specimen/Roboto+Mono?sidebar.open&selection.family=Archivo:wght@600|Exo:ital,wght@0,400;1,600|Gloria+Hallelujah|Roboto+Mono:wght@300;400|Roboto:wght@300;400;500&query=roboto+mono
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Exo:ital,wght@0,400;1,600&family=Gloria+Hallelujah&family=Roboto+Mono:wght@300;400&family=Roboto:wght@300;400;500&display=swap');
 
 // Variables
 
@@ -10,7 +12,7 @@ $light-bg: #2d2e32;
 $dark-bg: #25262a;
 
 // Fonts
-$mono: 'Ubuntu Mono', monospace;
+$mono: 'Roboto Mono', monospace;
 $archivo: 'Archivo', sans-serif;
 $heading: 'Roboto', sans-serif;
 $handwriting: 'Gloria Hallelujah', cursive;
@@ -67,10 +69,11 @@ body {
 
 .btn-primary {
 	background: $txt-primary;
+	// font-family: $heading;
 	margin: auto 1rem;
 	border-radius: 6px;
 	color: $light-bg;
-	font-weight: bold;
+	font-weight: 400;
 	padding: 1rem;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -88,7 +91,7 @@ body {
 	margin: auto 1rem;
 	border-radius: 6px;
 	color: $txt-primary;
-	font-weight: bold;
+	font-weight: 400;
 	text-decoration: none;
 	padding: 1rem;
 	text-transform: uppercase;
@@ -115,9 +118,9 @@ h2 {
 	padding-bottom: 1rem;
 	color: $txt-white;
 	font-family: $heading;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 400;
 
 	&:after {
 		content: '.';
@@ -128,11 +131,13 @@ h2 {
 p {
 	max-width: 30rem;
 	margin: auto;
+	font-weight: 300;
 }
 
 a {
 	color: $txt-primary;
 	transition: all 0.1s;
+	font-weight: 300;
 
 	&:hover {
 		color: lighten($txt-primary, 15%);
@@ -284,7 +289,7 @@ q {
 
 				span {
 					color: white;
-					font-weight: 500;
+					font-weight: 400;
 					font-style: italic;
 				}
 			}
@@ -294,6 +299,7 @@ q {
 				justify-content: flex-start;
 
 				a {
+					font-weight: bold;
 					margin-top: 1rem;
 					margin-left: 0;
 					padding: 0.75rem 2rem;
@@ -369,7 +375,7 @@ q {
 			li {
 				list-style: none;
 				font-family: $mono;
-				font-weight: bold;
+				font-weight: 400;
 				font-size: 1.5rem;
 				margin: 0.5rem auto;
 			}
@@ -436,6 +442,10 @@ q {
 
 #convinced {
 	padding: 2rem;
+
+	a {
+		font-weight: 400;
+	}
 
 	h2:after {
 		content: '?';
@@ -527,7 +537,6 @@ footer {
 	.other-info {
 		background: $dark-bg;
 		font-weight: 300;
-		font-size: 0.75rem;
 		font-family: $heading;
 		padding: 0.5rem;
 
@@ -560,7 +569,6 @@ footer {
 		}
 
 		.other-info {
-			font-size: 1rem;
 			font-family: $heading;
 			padding: 0.5rem;
 
