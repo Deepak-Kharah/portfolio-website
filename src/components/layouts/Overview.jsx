@@ -1,6 +1,7 @@
 import React from 'react';
 
 import desk from '../../static/desk_ill.webp';
+import SkillCard from '../lists/SkillCard';
 
 export default function Overview() {
 	return (
@@ -26,48 +27,10 @@ export default function Overview() {
 				<div id="skills">
 					<h2>Skills</h2>
 					<div className="skill-cards">
-						<div className="skill-card">
-							<header>
-								<h3>languages</h3>
-							</header>
-							<ul>
-								<li>Python</li>
-								<li>Javascript</li>
-								<li>C++</li>
-							</ul>
-						</div>
-
-						<div className="skill-card">
-							<header>
-								<h3>framework</h3>
-							</header>
-							<ul>
-								<li>Django</li>
-								<li>React</li>
-							</ul>
-						</div>
-
-						<div className="skill-card">
-							<header>
-								<h3>tools</h3>
-							</header>
-							<ul>
-								<li>Git</li>
-								<li>GitHub</li>
-								<li>Bitbucket</li>
-							</ul>
-						</div>
-
-						<div className="skill-card">
-							<header>
-								<h3>database</h3>
-							</header>
-							<ul>
-								<li>MongoDb</li>
-								<li>PostrgreSql</li>
-								<li>MySql</li>
-							</ul>
-						</div>
+						<SkillCard title="languages" skills={[ 'Python', 'JavaScript', 'C++' ]} />
+						<SkillCard title="framework" skills={[ 'Django', 'React' ]} />
+						<SkillCard title="tools" skills={[ 'Git', 'GitHub', 'BitBucket' ]} />
+						<SkillCard title="database" skills={[ 'MongoDb', 'PostgreSql', 'MySql' ]} />
 					</div>
 				</div>
 			</div>
