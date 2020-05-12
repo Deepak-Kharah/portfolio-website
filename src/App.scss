@@ -30,6 +30,7 @@ body {
 
 	section {
 		overflow: auto;
+		padding-bottom: 5rem;
 
 		&:nth-child(even) {
 			background-color: $light-bg;
@@ -54,8 +55,7 @@ body {
 
 		p {
 			text-align: justify;
-			font-size: 1.1rem;
-			margin-bottom: 3rem;
+			// margin-bottom: 3rem;
 		}
 	}
 }
@@ -67,34 +67,15 @@ body {
 
 // buttons
 
-.btn-primary {
-	background: $txt-primary;
-	margin: 0.5rem 1rem;
-	border-radius: 6px;
-	color: $light-bg;
-	font-weight: 400;
-	padding: 1rem;
-	text-transform: uppercase;
-	text-decoration: none;
-	transition: all 0.1s;
-
-	&:hover {
-		background-color: darken($txt-primary, 25%);
-		color: white;
-		box-shadow: $shadow;
-	}
-}
-
+.btn-primary,
 .btn-secondary {
-	border: 1px solid $txt-primary;
 	margin: 0.5rem 1rem;
 	border-radius: 6px;
-	color: $txt-primary;
-	font-weight: 400;
-	text-decoration: none;
-	padding: 1rem;
+	padding: 0.5rem 1rem;
 	text-transform: uppercase;
+	font-weight: 400;
 	transition: all 0.1s;
+	text-decoration: none;
 
 	&:hover {
 		background-color: darken($txt-primary, 25%);
@@ -102,6 +83,16 @@ body {
 		color: $txt-white;
 		box-shadow: $shadow;
 	}
+}
+
+.btn-primary {
+	background: $txt-primary;
+	color: $light-bg;
+}
+
+.btn-secondary {
+	border: 1px solid $txt-primary;
+	color: $txt-primary;
 }
 
 // text
@@ -345,10 +336,11 @@ q {
 	.bio .desk-ill {
 		display: none;
 	}
+
 	#skills {
-		margin-bottom: 5rem;
 		margin-top: 5rem;
 	}
+
 	.skill-cards {
 		display: flex;
 		justify-content: center;
@@ -416,10 +408,6 @@ q {
 				align-items: center;
 				justify-content: space-evenly;
 				flex-wrap: wrap;
-
-				a {
-					// margin: 1rem;
-				}
 			}
 
 			img {
@@ -463,11 +451,19 @@ q {
 	}
 }
 
+// Mentions
+
+.mention-timeline-element {
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 3rem;
+	}
+}
+
 // Contact
 
 #contact .container {
 	text-align: center;
-	padding-bottom: 3rem;
 
 	a {
 		font-size: 1.5rem;
