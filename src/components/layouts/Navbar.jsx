@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import resume from '../../static/resume_img.pdf';
+
 export default class Navbar extends Component {
 	constructor(props) {
 		super(props);
@@ -88,7 +90,13 @@ export default class Navbar extends Component {
 						<a href="#contact" onClick={this.hideNav}>
 							Contact
 						</a>
-						<a href="#!" onClick={this.hideNav}>
+						<a
+							href={resume}
+							target="_blank"
+							rel="noopener noreferrer"
+							download="Deepak_Kharah_resume_img"
+							onClick={this.hideNav}
+						>
 							Resume
 						</a>
 					</nav>

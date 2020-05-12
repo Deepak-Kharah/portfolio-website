@@ -1,6 +1,7 @@
 import React from 'react';
 
 import logo from '../../static/logo.webp';
+import resume from '../../static/resume_img.pdf';
 
 export default function Footer() {
 	return (
@@ -23,7 +24,14 @@ export default function Footer() {
 							<a href="#projects">Projects</a>
 							<a href="#mentions">Mentions</a>
 							<a href="#contact">Contact</a>
-							<a href="#!">Resumé</a>
+							<a
+								href={resume}
+								target="_blank"
+								rel="noopener noreferrer"
+								download="Deepak_Kharah_resume_img"
+							>
+								Resume
+							</a>
 						</nav>
 					</div>
 				</div>
