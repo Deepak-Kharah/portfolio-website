@@ -31,7 +31,7 @@ export default function Contact() {
 					</a>
 				</div>
 
-				<a href="mailto:me@deepakkharah.com">me@deepakkharah.com</a>
+				<a href="mailto:me@deepakkharah.me">me@deepakkharah.me</a>
 			</div>
 		</section>
 	);
