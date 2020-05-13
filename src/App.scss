@@ -602,9 +602,17 @@ footer {
 				display: flex;
 				justify-content: center;
 			}
+
 			p {
 				margin: 0;
-				margin-left: 1rem;
+				margin-left: 2px;
+			}
+			span {
+				color: $txt-primary;
+
+				&:hover {
+					color: $txt-white;
+				}
 			}
 		}
 	}
