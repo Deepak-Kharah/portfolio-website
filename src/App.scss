@@ -569,6 +569,13 @@ footer {
 			line-height: 1.25rem;
 			font-size: 0.75rem;
 		}
+		span {
+			color: $txt-primary;
+
+			&:hover {
+				color: $txt-white;
+			}
+		}
 	}
 
 	@media screen and (min-width: 1080px) {
@@ -606,13 +613,6 @@ footer {
 			p {
 				margin: 0;
 				margin-left: 2px;
-			}
-			span {
-				color: $txt-primary;
-
-				&:hover {
-					color: $txt-white;
-				}
 			}
 		}
 	}
