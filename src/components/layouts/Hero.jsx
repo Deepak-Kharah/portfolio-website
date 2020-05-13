@@ -6,10 +6,7 @@ export default function Hero() {
 			<div className="container">
 				<div className="content">
 					<h1 className="txt-white">
-						Hello<span role="img" aria-label="hi emoji">
-							👋🏻
-						</span>{' '}
-						I am<br />
+						Hello. I am<br />
 						<span className="txt-primary">Deepak Kharah.</span>
 					</h1>
 					<h3>
