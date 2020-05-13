@@ -22,6 +22,13 @@ $dark-shadow: 0 2rem 50px rgba(0, 0, 0, 0.2);
 
 // Global styles
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
 body {
 	color: $light-text;
 	font-family: $mono;
@@ -121,6 +128,10 @@ p {
 	max-width: 30rem;
 	margin: auto;
 	font-weight: 300;
+	line-height: 1.75rem;
+	@media screen and (min-width: 1080px) {
+		line-height: 2rem;
+	}
 }
 
 a {
@@ -168,7 +179,6 @@ q {
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
-		margin: 0 auto;
 
 		.logo {
 			display: flex;
@@ -190,11 +200,19 @@ q {
 		}
 
 		.hamburger-menu {
-			font-size: 2rem;
+			max-width: 2rem;
+
+			svg {
+				width: 100%;
+			}
 
 			&:hover {
 				color: $txt-white;
 				cursor: pointer;
+
+				path {
+					fill: $txt-white;
+				}
 			}
 		}
 	}
@@ -241,6 +259,11 @@ q {
 			margin-top: initial;
 			width: initial;
 			height: initial;
+
+			a {
+				margin-left: 1rem;
+				margin-right: 1rem;
+			}
 		}
 
 		.nav-hidden {
@@ -396,6 +419,7 @@ q {
 // Projects
 #projects {
 	.project-tile {
+		margin: 2rem auto;
 		.visual {
 			display: flex;
 			flex-direction: column;
@@ -409,6 +433,7 @@ q {
 
 			img {
 				max-width: 20rem;
+				border-radius: 2.25rem;
 				box-shadow: $dark-shadow;
 			}
 		}
@@ -421,10 +446,12 @@ q {
 	}
 
 	@media screen and (min-width: 1080px) {
+		.visual {
+			margin-right: 1rem;
+		}
 		.project-tile {
 			display: flex;
 			justify-content: space-evenly;
-			margin: 2rem auto;
 		}
 	}
 }
@@ -462,10 +489,6 @@ q {
 #contact .container {
 	text-align: center;
 
-	a {
-		font-size: 1.5rem;
-	}
-
 	p {
 		font-family: $handwriting;
 		text-align: center;
@@ -477,11 +500,15 @@ q {
 		padding: 2rem;
 		a {
 			color: $light-text;
-			font-size: 3rem;
+			font-size: 1rem;
 			margin: 2rem;
 
-			&:hover i {
-				color: $txt-white;
+			svg {
+				height: 2rem;
+			}
+
+			&:hover path {
+				fill: white;
 			}
 		}
 	}
@@ -535,12 +562,19 @@ footer {
 
 	.other-info {
 		background: $dark-bg;
-		font-weight: 300;
 		font-family: $heading;
 		padding: 0.5rem;
 
 		p {
 			line-height: 1.25rem;
+			font-size: 0.75rem;
+		}
+		span {
+			color: $txt-primary;
+
+			&:hover {
+				color: $txt-white;
+			}
 		}
 	}
 
@@ -575,10 +609,10 @@ footer {
 				display: flex;
 				justify-content: center;
 			}
+
 			p {
-				line-height: 1.25rem;
 				margin: 0;
-				margin-left: 1rem;
+				margin-left: 2px;
 			}
 		}
 	}

@@ -41,11 +41,10 @@ export default function Footer() {
 				<div className="content">
 					<p id="copyright">
 						{' '}
-						<span className="txt-primary"> © {new Date().getFullYear()}</span> Deepak Kharah. All rights
-						reserved.
+						<span> © {new Date().getFullYear()}</span> Deepak Kharah. All rights reserved.
 					</p>
 					<p>
-						<span className="txt-primary">Designed by</span> Deepak Kharah.
+						<span>Designed and Developed</span> with <span>♡</span> by Deepak Kharah.
 					</p>
 				</div>
 			</div>
