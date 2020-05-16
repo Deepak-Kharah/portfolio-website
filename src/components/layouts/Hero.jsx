@@ -10,7 +10,7 @@ export default function Hero() {
 						<span className="txt-primary">Deepak Kharah.</span>
 					</h1>
 					<h3>
-						A <span>full stack developer </span> who writes beautiful codes.
+						A <span>full stack developer </span> who writes beautiful code.
 					</h3>
 					<div>
 						<a className="btn-primary" href="#contact">
