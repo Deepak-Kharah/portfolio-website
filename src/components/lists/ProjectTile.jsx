@@ -18,14 +18,19 @@ export default function ProjectTile({
                 </div>
                 <br />
                 <div className="btn-grp">
-                    <a
-                        className="btn-primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={repo_link}
-                    >
-                        Review Code
-                    </a>
+                    {repo_link ? (
+                        <a
+                            className="btn-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={repo_link}
+                        >
+                            Review Code
+                        </a>
+                    ) : (
+                        <p>CLOSED SOURCE</p>
+                    )}
+
                     {live_link ? (
                         <a
                             className="btn-secondary"
